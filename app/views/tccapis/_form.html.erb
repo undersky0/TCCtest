@@ -1,0 +1,17 @@
+<%= form_for(@tccapi) do |f| %>
+  <% if @tccapi.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tccapi.errors.count, "error") %> prohibited this tccapi from being saved:</h2>
+
+      <ul>
+      <% @tccapi.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
